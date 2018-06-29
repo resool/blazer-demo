@@ -1,7 +1,7 @@
 require 'timecop'
 require 'faker'
 
-USER_COUNT = 1000
+USER_COUNT = 100
 
 User.where(admin: 'true').first_or_create do |t|
   t.email = 'admin@example.com'

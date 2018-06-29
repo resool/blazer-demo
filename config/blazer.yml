@@ -22,6 +22,7 @@ data_sources:
     # use_transaction: false
 
     smart_variables:
+      device_type: "SELECT '%' AS id, 'all' AS label UNION SELECT distinct device_type AS id, device_type AS label FROM ahoy_visits ORDER BY id ASC"
       # zone_id: "SELECT id, name FROM zones ORDER BY name ASC"
       # period: ["day", "week", "month"]
       # status: {0: "Active", 1: "Archived"}

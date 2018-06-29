@@ -42,6 +42,18 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    ahoy_matey (2.1.0)
+      addressable
+      browser (~> 2.0)
+      device_detector
+      geocoder (>= 1.4.5)
+      railties (>= 4.2)
+      referer-parser (>= 0.3)
+      request_store
+      safely_block (>= 0.2.1)
+      user_agent_parser
     arel (9.0.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -52,11 +64,13 @@ GEM
       safely_block (>= 0.1.1)
     bootsnap (1.3.0)
       msgpack (~> 1.0)
+    browser (2.5.3)
     builder (3.2.3)
     chartkick (2.3.5)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    device_detector (1.0.1)
     devise (4.4.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -69,6 +83,7 @@ GEM
     faker (1.8.7)
       i18n (>= 0.7)
     ffi (1.9.25)
+    geocoder (1.4.9)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
@@ -100,6 +115,7 @@ GEM
       method_source (~> 0.9.0)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
+    public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.5)
     rack-test (1.0.0)
@@ -132,6 +148,9 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    referer-parser (0.3.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -169,6 +188,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.12)
       execjs (>= 0.3.0, < 3)
+    user_agent_parser (2.4.1)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.6.2)
@@ -184,10 +204,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ahoy_matey
   blazer
   bootsnap (>= 1.1.0)
   devise
   faker
+  geocoder
   listen (>= 3.0.5, < 3.2)
   pg (< 1.0.0)
   pry-rails

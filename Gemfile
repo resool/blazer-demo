@@ -7,7 +7,9 @@ gem 'pg', '< 1.0.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
 
+gem 'ahoy_matey'
 gem 'blazer'
+gem 'geocoder'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
