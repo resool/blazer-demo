@@ -3,6 +3,11 @@ require 'faker'
 
 USER_COUNT = 1000
 
+User.where(admin: 'true').first_or_create do |t|
+  t.email = 'admin@example.com'
+  t.password = 'qwerty123'
+end
+
 (USER_COUNT - User.count).times do |index|
   print "\n#{index} users processed" if index % 100 == 0
   print '.' if index % 10 == 0
